@@ -26,10 +26,10 @@ bash update_anodns.sh  `ls *.token | head -n 1` $ip2
 
 #now change ip1
 
-#az network nic ip-config update --name ipconfig1  --nic-name 236 --resource-group  $GROUP --remove PublicIpAddress
+#az network nic ip-config update --name ipconfig1  --nic-name nic236 --resource-group  $GROUP --remove PublicIpAddress
 az network nic ip-config update --name $ipconfigName1  --nic-name $nicname --resource-group $GROUP  --remove PublicIpAddress
 
-#az network nic ip-config update --name ipconfig1  --nic-name 236 --resource-group  $GROUP --public-ip-address "ip"
+#az network nic ip-config update --name ipconfig1  --nic-name 236 --resource-group  $GROUP --public-ip-address "ip22"
 az network nic ip-config update --name $ipconfigName1  --nic-name $nicname --resource-group $GROUP --public-ip-address $publicIpName
 
 #register primary ip
@@ -37,8 +37,8 @@ bash update_anodns.sh  `ls *.token | head -n 1`
 
 #now change ip2
 
-#az network nic ip-config update --name ipconfig1  --nic-name 236 --resource-group  $GROUP --remove PublicIpAddress
+#az network nic ip-config update --name ipconfig2  --nic-name nic236 --resource-group  $GROUP --remove PublicIpAddress
 az network nic ip-config update --name $ipconfigName2  --nic-name $nicname --resource-group  $GROUP --remove PublicIpAddress
 
-#az network nic ip-config update --name ipconfig1  --nic-name 236 --resource-group  $GROUP --public-ip-address "ip"
+#az network nic ip-config update --name ipconfig2  --nic-name nic236 --resource-group  $GROUP --public-ip-address "ip23"
 az network nic ip-config update --name $ipconfigName2  --nic-name $nicname --resource-group $GROUP --public-ip-address $publicIpName2
