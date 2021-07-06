@@ -1,0 +1,13 @@
+#for ubuntu
+##azure cii
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+##google bbr
+sudo modprobe tcp_bbr
+echo "tcp_bbr" | sudo tee -a /etc/modules-load.d/modules.conf
+echo "net.core.default_qdisc=fq" | sudo tee -a /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+##outline vpn
+sudo apt-get install curl
+sudo bash -c "$(wget -qO-  https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
+
