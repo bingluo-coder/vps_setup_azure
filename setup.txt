@@ -14,3 +14,5 @@ sudo bash -c "$(wget -qO-  https://raw.githubusercontent.com/Jigsaw-Code/outline
 # 1. go to https://anondns.net/register.html and register a domain name
 # 2. save the Token of step 1, in to a local file on the server with a name, e.g. anondns.net.token
 # 3. use the script update_anodns.sh followed by the parameter of the token file name, to update the IP of your server regularly in the crontab. e.g. bash update_anodns.sh anondns.net.token 
+##update azure ip
+# to change the vm ip using azure api, you have to assign the role Contributer for the appid in IAM of the resource group
