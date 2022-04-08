@@ -1,4 +1,5 @@
 #for ubuntu
+apt-get update -y && apt-get upgrade -y
 ##azure cii
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ##google bbr
