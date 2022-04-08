@@ -11,9 +11,13 @@ sudo sysctl -p
 ##outline vpn
 sudo apt-get install curl
 sudo bash -c "$(wget -qO-  https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
+ufw allow from any to any port 20000 proto tcp 
+ufw allow from any to any port 20000 proto udp
+ufw allow from any to any port 48888 proto tcp
+
 ##ddns(anondns.net)
 # 1. go to https://anondns.net/register.html and register a domain name
-# 2. save the Token of step 1, in to a local file on the server with a name, e.g. anondns.net.token
-# 3. use the script update_anodns.sh followed by the parameter of the token file name, to update the IP of your server regularly in the crontab. e.g. bash update_anodns.sh anondns.net.token 
+# 2. save the Token of step 1, in to a local file on the server with a name, e.g. youdomain.anondns.net.token
+# 3. use the script update_anodns.sh followed by the parameter of the token file name, to update the IP of your server regularly in the crontab. e.g. bash update_anodns.sh youdomain.anondns.net.token 
 ##update azure ip
 # to change the vm ip using azure api, you have to assign the role Contributer for the appid in IAM of the resource group
