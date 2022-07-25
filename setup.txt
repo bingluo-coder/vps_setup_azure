@@ -17,6 +17,7 @@ ufw allow from any to any port 48888 proto tcp
 
 ##ddns(anondns.net)
 # 1. use the script generate_anondns.sh to generate the ddns name from from anondns.net. e.g. :
+sudo apt install jq
 ./generate_anondns.sh yourdomain 
 a tokent file yourdomain.anondns.net.token will be created at the same folder where you run the script. There is the key for updating your IP in that file.
 # 2. use the script update_anodns.sh followed by the parameter of the token file name, to update the IP of your server regularly in the crontab. e.g.:
